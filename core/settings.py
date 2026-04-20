@@ -141,6 +141,8 @@ CSRF_TRUSTED_ORIGINS = [
     'http://localhost:3000',
     "http://127.0.0.1:5173",
     "https://mini-crm-dals.onrender.com",
+    'https://mini-h3ww5ykfs-yazeed-rabab3ahs-projects.vercel.app',
+    'https://*.vercel.app',
 ]
 CORS_ALLOW_CREDENTIALS = True
 
@@ -163,3 +165,13 @@ SIMPLE_JWT = {
     "BLACKLIST_AFTER_ROTATION": True,
     "AUTH_HEADER_TYPES": ("Bearer",),
 }
+ALLOWED_HOSTS = ['*']
+CORS_ALLOW_ALL_ORIGINS = True  # temporary to test
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'authorization',
+    'content-type',
+    'x-csrftoken',
+    'x-requested-with',
+]
