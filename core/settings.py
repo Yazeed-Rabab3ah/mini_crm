@@ -17,7 +17,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['your-app.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['https://mini-crm-dals.onrender.com', 'localhost', '127.0.0.1']
 
 
 
@@ -133,6 +133,7 @@ CORS_ALLOWED_ORIGINS = [
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
+    "https://mini-crm-dals.onrender.com",
 ]
 CORS_ALLOW_CREDENTIALS = True
 
