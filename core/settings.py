@@ -128,10 +128,17 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
-    "https://your-app.vercel.app",
+    "https://mini-crm-chi.vercel.app",
+    "https://mini-h3ww5ykfs-yazeed-rabab3ahs-projects.vercel.app",
 ]
+
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://.*\.vercel\.app$",
+]   
+
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",
+    'http://localhost:3000',
     "http://127.0.0.1:5173",
     "https://mini-crm-dals.onrender.com",
 ]
