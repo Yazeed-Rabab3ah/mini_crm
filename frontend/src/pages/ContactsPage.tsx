@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { deleteContact, getContacts, getTeams, getAllContacts } from "../api/contacts";
 import type { Contact, Team } from "../types/contact";
 import ContactFilters from "../components/ContactFilters";

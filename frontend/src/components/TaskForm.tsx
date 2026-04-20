@@ -12,11 +12,11 @@ type Props = {
   contactId: number;
   showTitle?: boolean;
   onSubmit: (values: {
-    assigned_to_user: number;
-    created_by: number,
+    contact: number;
     title: string;
     priority: TaskPriority;
     status: "assigned";
+    content: string;
     due_date?: string | null;
   }) => Promise<void>;
 };
@@ -49,10 +49,10 @@ export default function TaskForm({ contactId, showTitle = true, onSubmit }: Prop
 
     try {
       await onSubmit({
-        created_by:contactId,
-        assigned_to_user: contactId,
+        contact: contactId,
         title: form.title,
         priority: form.priority,
+        content: form.content,
         due_date: form.due_date || null,
         status: "assigned",
       });

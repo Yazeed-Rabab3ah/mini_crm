@@ -1,8 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
 import { getCurrentUserIdFromToken } from "../api/auth";
 import { getContact } from "../api/contacts";
-import { createTask, deleteTask, getTasks, updateTask, getUserTasks } from "../api/tasks";
+import { createTask, deleteTask, getUserTasks } from "../api/tasks";
 import type { Contact } from "../types/contact";
 import type { Task, TaskPriority, TaskStatus } from "../types/task";
 import TaskForm from "../components/TaskForm";
@@ -83,7 +82,7 @@ export default function TasksPage() {
   async function handleCreateTask(values: {
     contact: number;
     title: string;
-    description?: string;
+    content: string;
     priority: TaskPriority;
     status: TaskStatus;
     due_date?: string | null;

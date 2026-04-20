@@ -64,7 +64,7 @@ export default function TaskTable({
   onDueToChange,
   onReset,
 }: Props) {
-  const { role, isManager, isSupervisor, isEmployee } = useRole();
+  const { isManager, isSupervisor, isEmployee } = useRole();
   const availableTabs =
     isManager ? MANAGER_TABS :
     isSupervisor ? SUPERVISOR_TABS :
